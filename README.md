@@ -18,4 +18,8 @@ Commands:
 	help		Show this
 ```
 
-Initial idea: Stipe Stajp Predanic, wd
+## Notes
+
+Initial idea: Stipe Stajp Predanic, wd.
+
+I'm not a shell script expert and any pull request is greatly appreciated.
