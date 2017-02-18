@@ -1,5 +1,7 @@
 # Mapped cd
 
+![Mapped cd example](http://ilakovac.com/mapped_cd/example.gif)
+
 This is a simple Oh My ZSH plugin that provides a subset of functionalities of [wd](https://github.com/mfaerevaag/wd)
 
 This can be also used as a shell script.
