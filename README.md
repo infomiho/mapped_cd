@@ -10,12 +10,12 @@ This can be also used as a shell script.
 Usage: c [command] <name>
 
 Commands:
-	add <name>	Adds the current working directory to your warp points
-	rm <name>	Removes the given warp point
-	list	        Print all stored warp points
-	show <name>    Show the path to given warp point
-	help		Show this extremely helpful text
-EOF
+	<name>	Changes your current directory to one mapped by <name>
+	add <name>	Maps current directory to <name>
+	rm <name>	Removes the mapping by <name>
+	list	Print all stored mappings
+	show <name>    Show the full path to <name>
+	help		Show this
 ```
 
 Initial idea: Stipe Stajp Predanic, wd

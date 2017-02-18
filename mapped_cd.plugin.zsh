@@ -1,4 +1,5 @@
-# Mapped cd
+# Mapped cd -
+
 MAPPED_CD=~/.mappedCd
 
 # If directory does not exist, create it
@@ -12,11 +13,12 @@ c_usage()
 	Usage: c [command] <name>
 
 	Commands:
-		add <name>	Adds the current working directory to your warp points
-		rm <name>	Removes the given warp point
-		list	        Print all stored warp points
-		show <name>    Show the path to given warp point
-		help		Show this extremely helpful text
+		<name>	Changes your current directory to one mapped by <name>
+		add <name>	Maps current directory to <name>
+		rm <name>	Removes the mapping by <name>
+		list	Print all stored mappings
+		show <name>    Show the full path to <name>
+		help		Show this
 	EOF
 }
 
@@ -28,6 +30,8 @@ c() {
 		c_add $2
 	elif [[ $1 = "rm" ]]; then
 		c_rm $2
+	elif [[ $1 = "show" ]]; then
+		c_show $2
 	elif [[ $1 = "help" || $1 = "--help" ]]; then
 		c_usage
 	elif [[ $1 = "" ]]; then
@@ -50,7 +54,10 @@ c_add() {
 	ln -s $(pwd) $MAPPED_CD/$1;
 }
 
-# Remove name -> folder mapping
 c_rm() {
 	unlink $MAPPED_CD/$1;
+}
+
+c_show() {
+	readlink -e $MAPPED_CD/$1;
 }
